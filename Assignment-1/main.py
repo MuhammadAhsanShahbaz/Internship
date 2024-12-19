@@ -15,7 +15,7 @@ def main():
     # Separating data on the bases of job id
     job_data = {}
     for row in sorted_data:
-        row_job_id = row.get("JOB_ID")
+        row_job_id = row.get("JOB_ID", '')
 
         if row_job_id not in job_data:
             job_data[row_job_id] = []
