@@ -1,5 +1,4 @@
 from scrapy import Spider, Request
-from scrapy.http import FormRequest
 
 from ..items import PartselectItem
 
@@ -9,13 +8,13 @@ class PartselecSpider(Spider):
     allowed_domains = ["www.partselect.com"]
     start_urls = ["https://www.partselect.com/"]
 
-    def parse(self, response):
+    def parse(self, response, **kwargs):
         with open('part_numbers.txt', 'r') as f:
             read = f.readlines()
 
-            for r in read:
-                a = r.strip()
-                url = f'http://www.partselect.com/api/search/?searchterm={a}'
+            for row in read:
+                part_no = row.strip()
+                url = f'http://www.partselect.com/api/search/?searchterm={part_no}'
                 yield Request(url=url, callback=self.start_scraping,
                               meta={'proxy': 'https://proxy.scrapeops.io/v1/'},
                               headers={'api_key': ''})
