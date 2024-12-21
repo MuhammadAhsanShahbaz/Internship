@@ -1,0 +1,24 @@
+Scrape all bicycles from https://www.gumtree.com/for-sale/sports-leisure-travel/bicycles
+
+
+Output XLSX file should have these fields (in exact sequence and with exact names):
+1- Name
+2- Location
+3- Price
+4- Date Posted
+5- Image URL
+6- Product URL
+
+
+
+Conditions:
+1- I want to run the script daily. 
+It should not scrape or visit those products which already been visited by previous day's running.
+
+2- I only need those products Posted withing a month (last 30 days.) 
+
+3- When I run the script, it should scrape the new results into a new file. This file should only contain those products which are not visited before by this script.
+
+
+Note: There is a limit of MAX 50 pages on gumtree. It shows products only for max 50 next pages. 
+I need all products NOT only 50 pages. 
