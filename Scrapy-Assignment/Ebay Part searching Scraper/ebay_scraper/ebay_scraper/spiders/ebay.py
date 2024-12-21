@@ -34,8 +34,10 @@ class EbaSpider(Spider):
 
     def search_part_number(self, response):
         items = EbayScraperItem()
+
         items['part_number'] = response.meta['part_number']
         items['results_count'] = response.css('.srp-controls__count-heading .BOLD ::text').get()
+
         yield items
 
     def get_part_numbers_from_file(self):
