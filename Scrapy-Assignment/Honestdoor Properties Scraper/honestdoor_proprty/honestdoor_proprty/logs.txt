@@ -1,0 +1,768 @@
+INFO: Scrapy 2.11.1 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: f3cedb352ca6192a
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Crawled (200) <GET https://honestdoor.com> (referer: None)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9844 5 St SE'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9840 5 St SE'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9819 7 St SE'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '808 Archwood Rd SE'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '00000 one two three'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9824 7 St SE'})
+INFO: Closing spider (finished)
+INFO: Stored csv feed (6 items) in: output/Results 27052024172627.csv
+INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 9300,
+ 'downloader/request_count': 7,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/request_method_count/POST': 6,
+ 'downloader/response_bytes': 72328,
+ 'downloader/response_count': 7,
+ 'downloader/response_status_count/200': 7,
+ 'elapsed_time_seconds': 5.738186,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 5, 27, 12, 26, 33, 738259, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 432554,
+ 'httpcompression/response_count': 7,
+ 'item_scraped_count': 6,
+ 'log_count/DEBUG': 14,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 1,
+ 'response_received_count': 7,
+ 'scheduler/dequeued': 7,
+ 'scheduler/dequeued/memory': 7,
+ 'scheduler/enqueued': 7,
+ 'scheduler/enqueued/memory': 7,
+ 'start_time': datetime.datetime(2024, 5, 27, 12, 26, 28, 73, tzinfo=datetime.timezone.utc)}
+INFO: Spider closed (finished)
+INFO: Scrapy 2.11.2 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: fe8850a8d5047534
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Crawled (403) <GET https://honestdoor.com> (referer: None)
+INFO: Ignoring response <403 https://honestdoor.com>: HTTP status code is not handled or not allowed
+INFO: Closing spider (finished)
+INFO: Stored csv feed (0 items) in: output/Results 01102024133220.csv
+INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 225,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 247,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 1.27261,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 10, 1, 8, 32, 23, 416206, tzinfo=datetime.timezone.utc),
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'log_count/DEBUG': 2,
+ 'log_count/INFO': 12,
+ 'log_count/WARNING': 2,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2024, 10, 1, 8, 32, 22, 143596, tzinfo=datetime.timezone.utc)}
+INFO: Spider closed (finished)
+INFO: Scrapy 2.11.2 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: e607fc91e7e3575d
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Redirecting (308) to <GET https://www.honestdoor.com> from <GET https://honestdoor.com>
+DEBUG: Crawled (200) <GET https://www.honestdoor.com> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '808 Archwood Rd SE'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9824 7 St SE'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9819 7 St SE'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '00000 one two three'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9844 5 St SE'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9840 5 St SE'})
+INFO: Closing spider (finished)
+INFO: Stored csv feed (6 items) in: output/Results 01102024133314.csv
+INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 10323,
+ 'downloader/request_count': 8,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/request_method_count/POST': 6,
+ 'downloader/response_bytes': 67633,
+ 'downloader/response_count': 8,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/308': 1,
+ 'elapsed_time_seconds': 6.54879,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 10, 1, 8, 33, 21, 952776, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 400254,
+ 'httpcompression/response_count': 7,
+ 'item_scraped_count': 6,
+ 'log_count/DEBUG': 15,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 1,
+ 'response_received_count': 7,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2024, 10, 1, 8, 33, 15, 403986, tzinfo=datetime.timezone.utc)}
+INFO: Spider closed (finished)
+INFO: Scrapy 2.11.2 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: d02e3661dfddde4c
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Redirecting (308) to <GET https://www.honestdoor.com> from <GET https://honestdoor.com>
+DEBUG: Crawled (200) <GET https://www.honestdoor.com> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '00000 one two three'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9844 5 St SE'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9819 7 St SE'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '808 Archwood Rd SE'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9840 5 St SE'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9824 7 St SE'})
+INFO: Closing spider (finished)
+INFO: Stored csv feed (6 items) in: output/Results 01102024135300.csv
+INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 10323,
+ 'downloader/request_count': 8,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/request_method_count/POST': 6,
+ 'downloader/response_bytes': 67626,
+ 'downloader/response_count': 8,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/308': 1,
+ 'elapsed_time_seconds': 12.272266,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 10, 1, 8, 53, 13, 664368, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 400255,
+ 'httpcompression/response_count': 7,
+ 'item_scraped_count': 6,
+ 'log_count/DEBUG': 15,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 1,
+ 'response_received_count': 7,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2024, 10, 1, 8, 53, 1, 392102, tzinfo=datetime.timezone.utc)}
+INFO: Spider closed (finished)
+INFO: Scrapy 2.11.2 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: a700c42e7e7dd504
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Redirecting (308) to <GET https://www.honestdoor.com> from <GET https://honestdoor.com>
+DEBUG: Crawled (200) <GET https://www.honestdoor.com> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+INFO: Received SIGINT, shutting down gracefully. Send again to force 
+INFO: Scrapy 2.11.2 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: fc35d32a0d35fce7
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Redirecting (308) to <GET https://www.honestdoor.com> from <GET https://honestdoor.com>
+DEBUG: Crawled (200) <GET https://www.honestdoor.com> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9824 7 St SE', 'Address': '9824 7 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J2T6', 'City Assessment 2024': 495000, 'Sold Price': None, 'Sold Date': '1985-06-27T00:00:00.000Z', 'Last Estimated Price': 590100, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9824-7-street-se-calgary-ab'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9840 5 St SE', 'Address': '9840 5 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J1K9', 'City Assessment 2024': 496500, 'Sold Price': 318500, 'Sold Date': '2010-12-30T00:00:00.000Z', 'Last Estimated Price': 586000, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9840-5-street-se-calgary-ab'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '00000 one two three', 'Address': '36 Tu Cho Drive', 'City': 'Two Mile And Two And One-half Mile Village', 'Province': 'Yukon', 'Postal Code': 'Y0A1C0', 'City Assessment 2024': None, 'Sold Price': None, 'Sold Date': None, 'Last Estimated Price': 652100, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/36-tu-cho-drive-two-mile-and-two-and-one-half-mile-village-yt-j693a'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '808 Archwood Rd SE', 'Address': '808 ARCHWOOD ROAD SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J1C4', 'City Assessment 2024': 506500, 'Sold Price': 181500, 'Sold Date': '2004-05-13T00:00:00.000Z', 'Last Estimated Price': 597400, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/808-archwood-road-se-calgary-ab'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9844 5 St SE', 'Address': '9844 5 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J1K9', 'City Assessment 2024': 558500, 'Sold Price': 123000, 'Sold Date': '1992-06-09T00:00:00.000Z', 'Last Estimated Price': 663100, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9844-5-street-se-calgary-ab'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9819 7 St SE', 'Address': '9819 7 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J2T7', 'City Assessment 2024': 544000, 'Sold Price': 439000, 'Sold Date': '2016-07-02T00:00:00.000Z', 'Last Estimated Price': 642600, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9819-7-street-se-calgary-ab'})
+INFO: Closing spider (finished)
+INFO: Stored csv feed (6 items) in: output/Results 01102024135755.csv
+INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 26691,
+ 'downloader/request_count': 14,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/request_method_count/POST': 12,
+ 'downloader/response_bytes': 78673,
+ 'downloader/response_count': 14,
+ 'downloader/response_status_count/200': 13,
+ 'downloader/response_status_count/308': 1,
+ 'elapsed_time_seconds': 8.426851,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 10, 1, 8, 58, 4, 637817, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 425840,
+ 'httpcompression/response_count': 13,
+ 'item_scraped_count': 6,
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 2,
+ 'response_received_count': 13,
+ 'scheduler/dequeued': 14,
+ 'scheduler/dequeued/memory': 14,
+ 'scheduler/enqueued': 14,
+ 'scheduler/enqueued/memory': 14,
+ 'start_time': datetime.datetime(2024, 10, 1, 8, 57, 56, 210966, tzinfo=datetime.timezone.utc)}
+INFO: Spider closed (finished)
+INFO: Scrapy 2.11.2 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: 15bb5e02509f0ceb
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Retrying <GET https://honestdoor.com> (failed 1 times): 502 Bad Gateway
+DEBUG: Redirecting (308) to <GET https://www.honestdoor.com> from <GET https://honestdoor.com>
+DEBUG: Crawled (200) <GET https://www.honestdoor.com> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+INFO: Received SIGINT, shutting down gracefully. Send again to force 
+INFO: Scrapy 2.11.2 started (bot: honestdoor_proprty)
+INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.1.2, Twisted 24.3.0, Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-11-10.0.22631-SP0
+INFO: Enabled addons:
+[]
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO: Telnet Password: c8fecc915ff1857b
+WARNING: C:\Users\Cuty computer\PycharmProjects\Scrapy\Virtual env\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO: Overridden settings:
+{'BOT_NAME': 'honestdoor_proprty',
+ 'FEED_EXPORT_FIELDS': ['Searched Address',
+                        'Address',
+                        'City',
+                        'Province',
+                        'Postal Code',
+                        'City Assessment 2024',
+                        'Sold Price',
+                        'Sold Date',
+                        'Last Estimated Price',
+                        'Last Estimated Date',
+                        'URL'],
+ 'NEWSPIDER_MODULE': 'honestdoor_proprty.spiders',
+ 'SPIDER_MODULES': ['honestdoor_proprty.spiders']}
+INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO: Enabled item pipelines:
+[]
+INFO: Spider opened
+INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO: Telnet console listening on 127.0.0.1:6023
+DEBUG: Redirecting (308) to <GET https://www.honestdoor.com> from <GET https://honestdoor.com>
+DEBUG: Crawled (200) <GET https://www.honestdoor.com> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9824 7 St SE', 'Address': '9824 7 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J2T6', 'City Assessment 2024': 495000, 'Sold Price': None, 'Sold Date': '1985-06-27T00:00:00.000Z', 'Last Estimated Price': 590100, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9824-7-street-se-calgary-ab'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9844 5 St SE', 'Address': '9844 5 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J1K9', 'City Assessment 2024': 558500, 'Sold Price': 123000, 'Sold Date': '1992-06-09T00:00:00.000Z', 'Last Estimated Price': 663100, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9844-5-street-se-calgary-ab'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '808 Archwood Rd SE', 'Address': '808 ARCHWOOD ROAD SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J1C4', 'City Assessment 2024': 506500, 'Sold Price': 181500, 'Sold Date': '2004-05-13T00:00:00.000Z', 'Last Estimated Price': 597400, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/808-archwood-road-se-calgary-ab'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '00000 one two three', 'Address': '36 Tu Cho Drive', 'City': 'Two Mile And Two And One-half Mile Village', 'Province': 'Yukon', 'Postal Code': 'Y0A1C0', 'City Assessment 2024': None, 'Sold Price': None, 'Sold Date': None, 'Last Estimated Price': 652100, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/36-tu-cho-drive-two-mile-and-two-and-one-half-mile-village-yt-j693a'})
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9840 5 St SE', 'Address': '9840 5 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J1K9', 'City Assessment 2024': 496500, 'Sold Price': 318500, 'Sold Date': '2010-12-30T00:00:00.000Z', 'Last Estimated Price': 586000, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9840-5-street-se-calgary-ab'})
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Crawled (200) <POST https://api.honestdoor.com/api/v1> (referer: https://honestdoor.com/)
+DEBUG: Scraped from <200 https://api.honestdoor.com/api/v1>
+OrderedDict({'Searched Address': '9819 7 St SE', 'Address': '9819 7 STREET SE', 'City': 'Calgary', 'Province': 'Alberta', 'Postal Code': 'T2J2T7', 'City Assessment 2024': 544000, 'Sold Price': 439000, 'Sold Date': '2016-07-02T00:00:00.000Z', 'Last Estimated Price': 642600, 'Last Estimated Date': '2024-09-10T00:00:00.000Z', 'URL': 'https://honestdoor.com/property/9819-7-street-se-calgary-ab'})
+INFO: Closing spider (finished)
+INFO: Stored csv feed (6 items) in: output/Results 01102024141611.csv
+INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 26691,
+ 'downloader/request_count': 14,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/request_method_count/POST': 12,
+ 'downloader/response_bytes': 78671,
+ 'downloader/response_count': 14,
+ 'downloader/response_status_count/200': 13,
+ 'downloader/response_status_count/308': 1,
+ 'elapsed_time_seconds': 8.438776,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 10, 1, 9, 16, 21, 285027, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 425840,
+ 'httpcompression/response_count': 13,
+ 'item_scraped_count': 6,
+ 'log_count/DEBUG': 21,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 2,
+ 'response_received_count': 13,
+ 'scheduler/dequeued': 14,
+ 'scheduler/dequeued/memory': 14,
+ 'scheduler/enqueued': 14,
+ 'scheduler/enqueued/memory': 14,
+ 'start_time': datetime.datetime(2024, 10, 1, 9, 16, 12, 846251, tzinfo=datetime.timezone.utc)}
+INFO: Spider closed (finished)
