@@ -1,0 +1,23 @@
+Search Address on https://honestdoor.com/
+
+Take addresses from spreadsheet
+
+Example Addresses:
+3760 Dover Ridge Drive SE
+8903 36 Avenue NW
+
+
+Scrape Fields:
+Address
+City
+Province
+Postal Code
+City Assessment 2024
+Sold Price
+Sold Date
+Last Estimated Price
+Last Estimated Date
+URL
+
+
+Note: The data is shown on the property page at the bottom in a paragraph
