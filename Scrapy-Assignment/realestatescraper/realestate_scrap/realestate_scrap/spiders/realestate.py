@@ -1,9 +1,8 @@
 import re
-
-
 from datetime import datetime
-from scrapy import Spider, Request
 from collections import OrderedDict
+
+from scrapy import Spider, Request
 
 
 class RealestateSpider(Spider):
@@ -57,22 +56,22 @@ class RealestateSpider(Spider):
 
         for address in addresses:
             url = f'https://www.realestate.com.au/buy/in-{address}/list-1?activeSort=relevance'
-            yield Request(url, headers=self.headers,
-                           cookies=self.cookies, callback=self.paggination)
+            yield Request(url=url, headers=self.headers,
+                          cookies=self.cookies, callback=self.paggination)
 
     def paggination(self, response):
         names = response.css('.details-link::attr(href)').getall()
 
         for name in names:
             url = f'https://www.realestate.com.au{name}'
-            yield Request(url, headers=self.headers,
+            yield Request(url=url, headers=self.headers,
                           cookies=self.cookies, callback=self.parse_data)
 
         next_url = response.css('.styles__Arrow-sc-1ciwyuo-0 a::attr(href)').get()
 
         if next_url:
             url = f'https://www.realestate.com.au{next_url}'
-            yield Request(url, headers=self.headers,
+            yield Request(url=url, headers=self.headers,
                           cookies=self.cookies, callback=self.paggination)
 
     def parse_data(self, response):
@@ -116,6 +115,7 @@ class RealestateSpider(Spider):
             items['Agent1 Name'] = items['Agent2 Name'] = items['Agent1 Number'] = ''
 
         items['Address'] = address
+
         return items
 
     def get_pictures(self, response):
@@ -139,8 +139,7 @@ class RealestateSpider(Spider):
                           cookies=self.cookies)
 
     def get_property(self, response):
-        property = response.css('.dlyvPZ::text').re_first(r'\d+')
-        return property
+        return response.css('.dlyvPZ::text').re_first(r'\d+')
 
     def get_agents(self, response, items):
         names = response.css('.layout__sidebar-primary .agent-info__name::text').getall()
