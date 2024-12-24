@@ -22,8 +22,6 @@ class CircuitBreakers(Spider):
         all_div = response.css(".woocommerce-loop-product__link::attr(href)").getall()
         next_pages = response.css('ul .page-numbers::attr(href)').get('')
 
-
-
         for product_url in all_div:
             items = CircuitbreakersItem()
 
