@@ -1,0 +1,44 @@
+Scrape For Sale, Sold and Rent Properties from https://www.zillow.com/
+
+Create 3 separate spiders for each above types under one single project. 
+
+Search the Zip code from the zip_codes.csv file.
+
+
+Choose these properties types only:
+1- Houses
+2- Townhome
+3- Condo
+4- Manufactured
+5- Apartments
+
+
+
+
+Fields to scrape (skip those fields which are not exists):
+Full Address
+Street
+City
+State
+Zipcode
+Latitude
+Longitude
+Beds
+Baths
+Sqft
+Lot
+Property_Type
+Property_Style
+Price
+Annual_Tax
+MLS
+Year_Built
+Agent_Name
+Broker_Name
+Agent_Phone
+Agent_Email
+Primary_Image
+Other_Images
+Availability_Date (For Rent properties)
+Sold_Date  (For sold properties)
+URL
