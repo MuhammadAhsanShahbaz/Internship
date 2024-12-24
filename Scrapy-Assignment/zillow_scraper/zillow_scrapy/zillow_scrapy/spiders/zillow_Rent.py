@@ -43,7 +43,7 @@ class ZillowRentSpider(Spider):
     def start_requests(self):
         yield Request(url=self.start_urls[0], headers=self.headers)
 
-    def parse(self, response):
+    def parse(self, response, **kwargs):
         for row in self.input_rows:
             state = row.get("State", '')
             zip_code = row.get("Zip", '')
@@ -54,7 +54,6 @@ class ZillowRentSpider(Spider):
 
     def parse_urls(self, response):
         detail_urls = []
-        # url = response.json().get('cat1', {}).get('searchResults', {}).get('mapResults', [])
         url = response.json().get('cat1', {}).get('searchResults', {}).get('listResults', [])
 
         for url_no in range(len(url)):
@@ -80,19 +79,14 @@ class ZillowRentSpider(Spider):
             if next_url:
                 page = re.search(r'(\d+)_p', next_url).group(1)
                 form_data = self.get_form_data(page)
-                #
-                # yield Request(url='https://www.zillow.com/async-create-search-page-state',
-                #         method='PUT',
-                #         body=json.dumps(form_data),
-                #         callback=self.parse_urls,
-                #         headers=self.headers
-                #               )
 
                 yield self.get_pull_request_for_urls(form_data)
 
     def parse_detail(self, response):
         data_dict = self.get_json(response)
+
         items = OrderedDict()
+
         items['URL'] = response.url
         items['Full Address'] = self.get_address(response)
         items['Images'] = self.get_images(data_dict)
@@ -123,6 +117,7 @@ class ZillowRentSpider(Spider):
         items['Sold Date'] = self.get_date(data_dict)
 
         self.write_csv(items)
+
         yield items
 
     def get_urlsfromfile(self):

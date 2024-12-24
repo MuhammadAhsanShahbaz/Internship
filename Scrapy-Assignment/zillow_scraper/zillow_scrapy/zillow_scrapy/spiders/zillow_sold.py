@@ -1,6 +1,3 @@
-import json
-
-from scrapy import Request
 from .zillow_Rent import ZillowRentSpider
 
 
@@ -64,10 +61,3 @@ class ZillowSoldSpider(ZillowRentSpider):
         }
 
         return json_data
-
-        # return Request(url='https://www.zillow.com/async-create-search-page-state',
-        #                method='PUT',
-        #                body=json.dumps(json_data),
-        #                callback=self.parse_urls,
-        #                headers=self.headers)
-#
